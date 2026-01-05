@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나의 첫 웹페이지</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        h1 {
+            color: #667eea;
+            text-align: center;
+        }
+        button {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        button:hover {
+            background: #5568d3;
+        }
+        .info {
+            background: #f0f4ff;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🌟 HTML 예제 페이지</h1>
+        
+        <h2>환영합니다!</h2>
+        <p>이것은 간단한 HTML 예제입니다. HTML, CSS, JavaScript가 포함되어 있습니다.</p>
+        
+        <div class="info">
+            <h3>주요 기능</h3>
+            <ul>
+                <li>반응형 디자인</li>
+                <li>인터랙티브 버튼</li>
+                <li>아름다운 그라데이션 배경</li>
+            </ul>
+        </div>
+        
+        <button onclick="showMessage()">클릭해보세요!</button>
+        
+        <p id="message"></p>
+    </div>
+
+    <script>
+        function showMessage() {
+            const messages = [
+                '안녕하세요! 👋',
+                '멋진 하루 되세요! ✨',
+                'HTML은 재미있어요! 🚀',
+                '계속 배워나가세요! 📚'
+            ];
+            const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+            document.getElementById('message').textContent = randomMessage;
+            document.getElementById('message').style.color = '#667eea';
+            document.getElementById('message').style.fontSize = '18px';
+            document.getElementById('message').style.marginTop = '15px';
+        }
+    </script>
+</body>
+</html>
